@@ -3,16 +3,16 @@ import React, { Component }  from 'react';
 import Filter from './Filter';
 import FilteredFruitList from './FilteredFruitList.js';
 
-const FruitBasket = (props) => {
+const FruitBasket = ({ handleChange, filters, currentFilter, fruit}) => {
   return (
     <div className="fruit-basket">
       <Filter
-        handleChange={props.handleChange}
-        filters={props.filters}
+        handleChange={handleChange}
+        filters={filters}
       />
       <FilteredFruitList
-        fruit={props.fruit}
-        filter={props.currentFilter}
+        fruit={fruit}
+        filter={currentFilter}
       />
     </div>
   )
